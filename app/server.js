@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // MongoDB connection URL (modify as needed)
-const mongoUrlLocal = "mongodb://mongoadmin:secret@mongodb:27017/user-account?authSource=admin";
+const mongoUrlLocal = MONGO_URI;
 
 // Connect to MongoDB using the Docker Compose service name
 mongoose.connect(mongoUrlLocal, { useNewUrlParser: true, useUnifiedTopology: true })
